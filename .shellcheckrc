@@ -1,0 +1,6 @@
+# Global ShellCheck configuration
+# See https://github.com/koalaman/shellcheck/wiki/Directive
+
+# Allow sourcing from paths determined at runtime
+disable=SC1090
+disable=SC1091

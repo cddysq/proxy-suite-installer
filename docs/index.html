@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proxy Suite Installer</title>
+  <meta name="description" content="One-command proxy setup for Clash Verge Rev on WSL, Linux and macOS." id="metaDesc">
+  <link rel="canonical" href="https://proxy.wusaqi.me/">
+  <meta name="theme-color" content="#0F172A">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://proxy.wusaqi.me/">
+  <meta property="og:title" content="Proxy Suite Installer">
+  <meta property="og:description" content="One-command proxy setup for Clash Verge Rev on WSL, Linux and macOS." id="ogDesc">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Proxy Suite Installer">
+  <meta name="twitter:description" content="One-command proxy setup for Clash Verge Rev on WSL, Linux and macOS." id="twitterDesc">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Skip to content -->
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="/">
+        proxy-suite <span>installer</span>
+      </a>
+      <nav class="header-links" aria-label="Main navigation">
+        <a href="https://github.com/cddysq/proxy-suite-installer" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/cddysq/proxy-suite-installer/blob/main/CHANGELOG.md" target="_blank" rel="noopener" data-i18n="changelog">Changelog</a>
+        <button class="lang-switch" id="langToggle" type="button" data-aria-i18n="lang_switch_aria">EN</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 data-i18n="hero_title">Proxy Suite Installer</h1>
+      <p class="subtitle" data-i18n="hero_subtitle">
+        One-command setup for Clash Verge Rev.<br>
+        Manage proxy state across your terminal tools.
+      </p>
+
+      <div class="install-box">
+        <div class="terminal-bar">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot yellow"></span>
+          <span class="terminal-dot green"></span>
+          <span class="terminal-title">Terminal</span>
+        </div>
+        <div class="install-command">
+          <span class="prompt">$</span>
+          <code id="installCmd">curl -fsSL https://proxy.wusaqi.me/install.sh | bash</code>
+          <button class="copy-btn" id="copyBtn" type="button" data-aria-i18n="copy_aria">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span data-i18n="copy">Copy</span>
+          </button>
+        </div>
+        <p class="install-alt" data-i18n="install_alt">
+          Requires bash, curl. Supports WSL / Linux / macOS.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="container">
+      <h2 data-i18n="features_title">Features</h2>
+      <div class="feature-grid">
+
+        <div class="feature-card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+          </div>
+          <h3 data-i18n="f1_title">Unified CLI</h3>
+          <p data-i18n="f1_desc">
+            A single <code>proxy</code> command to start, stop, test, and manage your proxy.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3 data-i18n="f2_title">Tool Integration</h3>
+          <p data-i18n="f2_desc">
+            Automatically configures git, npm, pnpm, yarn, and pip proxy settings.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3 data-i18n="f3_title">Verified Downloads</h3>
+          <p data-i18n="f3_desc">
+            SHA256 digest verification for all downloaded release assets.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+          </div>
+          <h3 data-i18n="f4_title">Idempotent Install</h3>
+          <p data-i18n="f4_desc">
+            Managed shell blocks prevent duplication. Reinstall anytime, no manual cleanup.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Workflow -->
+  <section class="workflow">
+    <div class="container">
+      <h2 data-i18n="workflow_title">Daily Workflow</h2>
+      <div class="workflow-steps">
+        <div class="workflow-step">
+          <span class="step-num">1</span>
+          <span class="step-cmd">proxy on</span>
+          <span class="step-desc" data-i18n="w1">Start Clash Verge + enable proxy</span>
+        </div>
+        <div class="workflow-step">
+          <span class="step-num">2</span>
+          <span class="step-cmd">proxy test</span>
+          <span class="step-desc" data-i18n="w2">Verify ports + outbound connectivity</span>
+        </div>
+        <div class="workflow-step">
+          <span class="step-num">3</span>
+          <span class="step-cmd">proxy status</span>
+          <span class="step-desc" data-i18n="w3">Show compact state overview</span>
+        </div>
+        <div class="workflow-step">
+          <span class="step-num">4</span>
+          <span class="step-cmd">proxy off</span>
+          <span class="step-desc" data-i18n="w4">Stop everything and clean env</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Requirements -->
+  <section class="requirements">
+    <div class="container">
+      <h2 data-i18n="req_title">Requirements</h2>
+      <div class="req-table">
+        <div class="req-row">
+          <span class="platform">WSL / Linux</span>
+          <span class="deps"><code>bash</code> <code>curl</code> <code>awk</code> <code>sed</code> <code>grep</code> <code>cut</code></span>
+        </div>
+        <div class="req-row">
+          <span class="platform">macOS</span>
+          <span class="deps"><code>bash</code> <code>curl</code> <code>hdiutil</code></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://github.com/cddysq/proxy-suite-installer" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/cddysq/proxy-suite-installer/blob/main/README.md" target="_blank" rel="noopener">Docs</a>
+        <a href="https://github.com/cddysq/proxy-suite-installer/issues" target="_blank" rel="noopener">Issues</a>
+      </div>
+      <p class="footer-copy">MIT License</p>
+    </div>
+  </footer>
+
+  <script>
+  /* === i18n === */
+  const i18n = {
+    en: {
+      changelog: 'Changelog',
+      hero_title: 'Proxy Suite Installer',
+      hero_subtitle: 'One-command setup for Clash Verge Rev.<br>Manage proxy state across your terminal tools.',
+      install_alt: 'Requires bash, curl. Supports WSL / Linux / macOS.',
+      copy: 'Copy',
+      copy_aria: 'Copy install command',
+      lang_switch_aria: '\u4e2d\u6587 \u2014 Switch to Chinese',
+      meta_desc: 'One-command proxy setup for Clash Verge Rev on WSL, Linux and macOS.',
+      features_title: 'Features',
+      f1_title: 'Unified CLI',
+      f1_desc: 'A single <code>proxy</code> command to start, stop, test, and manage your proxy.',
+      f2_title: 'Tool Integration',
+      f2_desc: 'Automatically configures git, npm, pnpm, yarn, and pip proxy settings.',
+      f3_title: 'Verified Downloads',
+      f3_desc: 'SHA256 digest verification for all downloaded release assets.',
+      f4_title: 'Idempotent Install',
+      f4_desc: 'Managed shell blocks prevent duplication. Reinstall anytime, no manual cleanup.',
+      workflow_title: 'Daily Workflow',
+      w1: 'Start Clash Verge + enable proxy',
+      w2: 'Verify ports + outbound connectivity',
+      w3: 'Show compact state overview',
+      w4: 'Stop everything and clean env',
+      req_title: 'Requirements',
+    },
+    zh: {
+      changelog: '\u66f4\u65b0\u65e5\u5fd7',
+      hero_title: 'Proxy Suite Installer',
+      hero_subtitle: '\u4e00\u952e\u5b89\u88c5 Clash Verge Rev\u3002<br>\u7edf\u4e00\u7ba1\u7406\u7ec8\u7aef\u5de5\u5177\u7684\u4ee3\u7406\u72b6\u6001\u3002',
+      install_alt: '\u9700\u8981 bash\u3001curl\u3002\u652f\u6301 WSL / Linux / macOS\u3002',
+      copy: '\u590d\u5236',
+      copy_aria: '\u590d\u5236 \u2014 \u590d\u5236\u5b89\u88c5\u547d\u4ee4',
+      lang_switch_aria: 'EN \u2014 \u5207\u6362\u5230\u82f1\u6587',
+      meta_desc: '\u4e00\u952e\u5b89\u88c5 Clash Verge Rev\uff0c\u7edf\u4e00\u7ba1\u7406 WSL\u3001Linux \u548c macOS \u7ec8\u7aef\u5de5\u5177\u7684\u4ee3\u7406\u72b6\u6001\u3002',
+      features_title: '\u6838\u5fc3\u7279\u6027',
+      f1_title: '\u7edf\u4e00 CLI',
+      f1_desc: '\u4e00\u4e2a <code>proxy</code> \u547d\u4ee4\u5373\u53ef\u542f\u52a8\u3001\u505c\u6b62\u3001\u6d4b\u8bd5\u548c\u7ba1\u7406\u4ee3\u7406\u3002',
+      f2_title: '\u5de5\u5177\u96c6\u6210',
+      f2_desc: '\u81ea\u52a8\u914d\u7f6e git\u3001npm\u3001pnpm\u3001yarn \u548c pip \u7684\u4ee3\u7406\u8bbe\u7f6e\u3002',
+      f3_title: '\u4e0b\u8f7d\u6821\u9a8c',
+      f3_desc: '\u901a\u8fc7 SHA256 \u6458\u8981\u9a8c\u8bc1\u6240\u6709\u4e0b\u8f7d\u7684\u53d1\u5e03\u8d44\u4ea7\u5b8c\u6574\u6027\u3002',
+      f4_title: '\u5e42\u7b49\u5b89\u88c5',
+      f4_desc: '\u6258\u7ba1\u4ee3\u7801\u5757\u9632\u6b62\u91cd\u590d\u3002\u968f\u65f6\u91cd\u88c5\uff0c\u65e0\u9700\u624b\u52a8\u6e05\u7406\u3002',
+      workflow_title: '\u65e5\u5e38\u5de5\u4f5c\u6d41',
+      w1: '\u542f\u52a8 Clash Verge + \u5f00\u542f\u4ee3\u7406',
+      w2: '\u9a8c\u8bc1\u7aef\u53e3\u548c\u51fa\u7ad9\u8fde\u901a\u6027',
+      w3: '\u67e5\u770b\u7d27\u51d1\u72b6\u6001\u6982\u89c8',
+      w4: '\u505c\u6b62\u4e00\u5207\u5e76\u6e05\u7406\u73af\u5883\u53d8\u91cf',
+      req_title: '\u73af\u5883\u8981\u6c42',
+    }
+  };
+
+  function setLang(lang) {
+    document.documentElement.lang = lang;
+    const texts = i18n[lang];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (texts[key]) el.innerHTML = texts[key];
+    });
+    document.querySelectorAll('[data-aria-i18n]').forEach(el => {
+      const key = el.getAttribute('data-aria-i18n');
+      if (texts[key]) el.setAttribute('aria-label', texts[key]);
+    });
+    const toggle = document.getElementById('langToggle');
+    toggle.textContent = lang === 'zh' ? 'EN' : '\u4e2d\u6587';
+    /* Update meta descriptions */
+    if (texts.meta_desc) {
+      var d = document.getElementById('metaDesc');
+      if (d) d.setAttribute('content', texts.meta_desc);
+      var og = document.getElementById('ogDesc');
+      if (og) og.setAttribute('content', texts.meta_desc);
+      var tw = document.getElementById('twitterDesc');
+      if (tw) tw.setAttribute('content', texts.meta_desc);
+    }
+    try { localStorage.setItem('proxy-suite-lang', lang); } catch (_) {}
+  }
+
+  document.getElementById('langToggle').addEventListener('click', () => {
+    setLang(document.documentElement.lang === 'zh' ? 'en' : 'zh');
+  });
+
+  /* === Copy button === */
+  document.getElementById('copyBtn').addEventListener('click', function() {
+    const cmd = document.getElementById('installCmd').textContent;
+    navigator.clipboard.writeText(cmd).then(() => {
+      const btn = this;
+      const textEl = btn.querySelector('[data-i18n="copy"]');
+      const origText = textEl.textContent;
+      textEl.textContent = document.documentElement.lang === 'zh' ? '\u5df2\u590d\u5236' : 'Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        textEl.textContent = origText;
+        btn.classList.remove('copied');
+      }, 2000);
+    });
+  });
+
+  /* === Init lang === */
+  (function() {
+    let saved;
+    try { saved = localStorage.getItem('proxy-suite-lang'); } catch (_) {}
+    const lang = saved || (navigator.language.startsWith('zh') ? 'zh' : 'en');
+    setLang(lang);
+  })();
+  </script>
+
+</body>
+</html>
